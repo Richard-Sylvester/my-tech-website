@@ -9,11 +9,27 @@ const Projects = () => {
         <p className="text-center text-sm font-bold tracking-widest text-gray-400 uppercase mb-8">
           Powering digital growth for local leaders
         </p>
-        <div className="flex flex-wrap justify-center gap-10 md:gap-20 opacity-60 grayscale">
-          <h3 className="text-xl font-black">Guru Sai Constructions</h3>
-          <h3 className="text-xl font-black text-gray-600">Client Two</h3>
-          <h3 className="text-xl font-black text-gray-600">Client Three</h3>
-          <h3 className="text-xl font-black text-gray-600">Client Four</h3>
+        
+        {/* Removed the global opacity and grayscale from this container! */}
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20">
+          
+          {/* Guru Sai: Full color, larger logo, stacked text */}
+          {/* Swapped the color hover for a scale hover (hover:scale-105) */}
+          <div className="flex flex-col items-center justify-center gap-3 hover:scale-105 transition-transform cursor-pointer">
+            
+            {/* Bumped the size up drastically to h-16 on mobile, h-20 on desktop */}
+            <img 
+              src="/gurusai-logo.png" 
+              alt="Guru Sai Logo" 
+              className="h-16 md:h-20 w-auto object-contain"
+            />
+            <h3 className="text-xl font-black text-gray-900 text-center">Guru Sai Constructions & Developers</h3>
+          </div>
+
+          {/* Placeholder Clients: Muted them individually so Guru Sai stands out */}
+          <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Two</h3>
+          <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Three</h3>
+          <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Four</h3>
         </div>
       </div>
 
