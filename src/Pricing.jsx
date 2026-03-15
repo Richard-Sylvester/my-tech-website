@@ -16,7 +16,6 @@ const Pricing = ({ onOpenContact }) => {
           </p>
         </div>
 
-        {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
           
           {/* TIER 1: THE ANCHOR */}
@@ -29,9 +28,10 @@ const Pricing = ({ onOpenContact }) => {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Launchpad</h3>
             <p className="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">Perfect for local businesses needing a professional digital footprint.</p>
+            
+            {/* Removed ₹18k, replaced with Custom Quote */}
             <div className="mb-8">
-              <span className="text-4xl font-black text-gray-900">₹18k</span>
-              <span className="text-gray-500 font-medium"> /project</span>
+              <span className="text-3xl font-black text-gray-900">Custom Quote</span>
             </div>
             
             <ul className="space-y-4 mb-8">
@@ -42,7 +42,6 @@ const Pricing = ({ onOpenContact }) => {
                 </li>
               ))}
             </ul>
-            {/* 2. Added onClick here */}
             <button onClick={onOpenContact} className="w-full py-4 rounded-full font-bold text-gray-900 bg-white border-2 border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors">
               Start Project
             </button>
@@ -62,9 +61,10 @@ const Pricing = ({ onOpenContact }) => {
 
             <h3 className="text-2xl font-bold text-white mb-2">Blueprint</h3>
             <p className="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">The ultimate conversion engine for growing brands and agencies.</p>
+            
+            {/* Removed ₹25k, replaced with Custom Quote */}
             <div className="mb-8">
-              <span className="text-5xl font-black text-white">₹25k</span>
-              <span className="text-slate-400 font-medium"> /project</span>
+              <span className="text-4xl font-black text-white">Custom Quote</span>
             </div>
             
             <ul className="space-y-4 mb-8">
@@ -75,7 +75,6 @@ const Pricing = ({ onOpenContact }) => {
                 </li>
               ))}
             </ul>
-            {/* 3. Added onClick here */}
             <button onClick={onOpenContact} className="w-full py-4 rounded-full font-bold text-white bg-blue-600 hover:bg-blue-500 hover:scale-[1.02] transition-all shadow-lg">
               Start Project
             </button>
@@ -91,8 +90,10 @@ const Pricing = ({ onOpenContact }) => {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Empire</h3>
             <p className="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">Full-scale web applications and massive digital infrastructures.</p>
+            
+            {/* Changed from Custom to Retainer to differentiate from the others slightly */}
             <div className="mb-8">
-              <span className="text-4xl font-black text-gray-900">Custom</span>
+              <span className="text-3xl font-black text-gray-900">Retainer</span>
             </div>
             
             <ul className="space-y-4 mb-8">
@@ -103,7 +104,6 @@ const Pricing = ({ onOpenContact }) => {
                 </li>
               ))}
             </ul>
-            {/* 4. Added onClick here */}
             <button onClick={onOpenContact} className="w-full py-4 rounded-full font-bold text-gray-900 bg-white border-2 border-gray-200 hover:border-gray-900 hover:text-gray-900 transition-colors">
               Let's Talk
             </button>

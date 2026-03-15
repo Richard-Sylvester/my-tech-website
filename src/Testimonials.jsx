@@ -1,22 +1,25 @@
+import ScrollReveal from "./ScrollReveal";
+
 const Testimonials = () => {
   return (
     // THE FIX: Added bg-gradient-to-b from-white to-gray-50 
     // This perfectly melts the white from the Projects section into the soft gray!
-    <section id="testimonials" className="w-full pt-8 pb-32 relative z-10 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+    <section id="testimonials" className="w-full pt-8 pb-32 relative z-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        
+ 
         {/* Section Title */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
             Word on the <span className="text-blue-600">Street.</span>
           </h2>
           <p className="text-gray-500 mt-4 font-medium">What it's like to work with Richie.</p>
-        </div>
+          
+        </div>    
 
         {/* THE MINIMALIST CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
+          <ScrollReveal>
           {/* Card 1 */}
           <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
             <p className="text-gray-600 font-medium leading-relaxed mb-8">
@@ -24,7 +27,9 @@ const Testimonials = () => {
             </p>
             <div className="font-bold text-gray-900 text-sm uppercase tracking-wider">Upcoming Client 1</div>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal>
           {/* Card 2 - Staggered layout */}
           <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 md:mt-12">
             <p className="text-gray-600 font-medium leading-relaxed mb-8">
@@ -32,7 +37,9 @@ const Testimonials = () => {
             </p>
             <div className="font-bold text-gray-900 text-sm uppercase tracking-wider">Upcoming Client 2</div>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal>
           {/* Card 3 */}
           <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
             <p className="text-gray-600 font-medium leading-relaxed mb-8">
@@ -40,7 +47,8 @@ const Testimonials = () => {
             </p>
             <div className="font-bold text-gray-900 text-sm uppercase tracking-wider">Upcoming Client 3</div>
           </div>
-
+          </ScrollReveal>
+          
         </div>
       </div>
     </section>

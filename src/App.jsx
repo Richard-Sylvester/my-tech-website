@@ -7,6 +7,7 @@ import Pricing from './Pricing'
 import Footer from './footer'
 import Contact from './Contact' // 2. Added Contact import
 import { motion, AnimatePresence } from 'framer-motion' // 3. Added AnimatePresence
+import ScrollReveal from './ScrollReveal';
 
 function App() {
   // 4. This is the switch! False = modal hidden, True = modal drops down
@@ -116,7 +117,9 @@ function App() {
       <Pricing onOpenContact={() => setIsContactOpen(true)} />
       
       {/* 5. We pass the trigger down to the Footer */}
+      <ScrollReveal>
       <Footer onOpenContact={() => setIsContactOpen(true)} />
+      </ScrollReveal>
 
       {/* 6. The drop-down modal lives here at the very bottom! */}
       <AnimatePresence>

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import ScrollReveal from './ScrollReveal';
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+          <ScrollReveal>
           {/* LEFT SIDE: The Narrative */}
           <div>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-6">
@@ -18,10 +19,10 @@ const About = () => {
                 Hi, I'm Richie. I'm a web developer and digital architect based in Bangalore. 
               </p>
               <p>
-                With a formal background in Artificial Intelligence and Data Science, I approach web development differently. I don't just build websites that look good, I build intelligent, high-performance systems designed to scale and convert.
+                With a formal background in Artificial Intelligence and Data Science, I approach web development differently. I don't just build websites that look good, I build intelligent, high-performance systems designed to help your business thrive.
               </p>
               <p>
-                Beyond the editor, I have a deep passion for videography and content creation. This multimedia perspective allows me to bridge the gap between heavy technical architecture and highly engaging, cinematic user experiences.
+                Beyond the editor, I have a deep passion for videography and content creation. This perspective allows me to bridge the gap between heavy technical architecture and highly engaging, cinematic user experiences.
               </p>
             </div>
 
@@ -31,7 +32,9 @@ const About = () => {
               <p className="text-blue-600 font-medium italic">"Building the digital infrastructure for tomorrow's leading brands."</p>
             </div>
           </div>
-
+          </ScrollReveal>
+          
+          <ScrollReveal>
           {/* RIGHT SIDE: The Visual Bento Grid */}
           <div className="grid grid-cols-2 gap-4 h-full">
             
@@ -68,6 +71,7 @@ const About = () => {
             </div>
 
           </div>
+          </ScrollReveal>
 
         </div>
       </div>

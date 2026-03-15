@@ -111,10 +111,10 @@ const Contact = ({ onClose }) => {
                   <label htmlFor="service" className="text-xs md:text-sm font-bold text-gray-900 ml-2">How can I help?</label>
                   <div className="relative">
                     <select name="service" id="service" defaultValue="Blueprint Package (₹25k)" className="w-full bg-gray-50 border border-gray-100 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 text-sm md:text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all appearance-none cursor-pointer font-medium">
-                      <option>Launchpad Package (₹18k)</option>
-                      <option>Blueprint Package (₹25k)</option>
-                      <option>Empire Package (Custom)</option>
-                      <option>Other / Just saying hi!</option>
+                      <option>Launchpad Package </option>
+                      <option>Blueprint Package </option>
+                      <option>Empire Package </option>
+                      <option>Other !</option>
                     </select>
                     <div className="absolute inset-y-0 right-4 md:right-2 flex items-center pointer-events-none text-gray-400">▼</div>
                   </div>

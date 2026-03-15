@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 const Projects = () => {
   return (
     <section id="work" className="w-full bg-white pt-10 pb-24 relative z-20">
-      
       {/* 1. THE SOCIAL PROOF BAR */}
       <div className="max-w-5xl mx-auto px-6 mb-20">
         <p className="text-center text-sm font-bold tracking-widest text-gray-400 uppercase mb-8">
