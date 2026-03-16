@@ -1,22 +1,35 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { useState, useRef } from 'react';
 
 const Projects = () => {
+  // 1. Hooks and logic MUST live inside the component!
+  const scrollContainerRef = useRef(null);
+
+  // 2. The function that slides the container left or right
+  const scroll = (direction) => {
+    const { current } = scrollContainerRef;
+    if (current) {
+      // Slides 350px on mobile, 500px on desktop for a smooth jump
+      const scrollAmount = window.innerWidth < 768 ? 350 : 500;
+      current.scrollBy({ 
+        left: direction === 'left' ? -scrollAmount : scrollAmount, 
+        behavior: 'smooth' 
+      });
+    }
+  };
+
   return (
     <section id="work" className="w-full bg-white pt-10 pb-24 relative z-20">
+      
       {/* 1. THE SOCIAL PROOF BAR */}
       <div className="max-w-5xl mx-auto px-6 mb-20">
         <p className="text-center text-sm font-bold tracking-widest text-gray-400 uppercase mb-8">
           Powering digital growth for local leaders
         </p>
         
-        {/* Removed the global opacity and grayscale from this container! */}
         <div className="flex flex-wrap items-center justify-center gap-10 md:gap-20">
-          
-          {/* Guru Sai: Full color, larger logo, stacked text */}
-          {/* Swapped the color hover for a scale hover (hover:scale-105) */}
+          {/* Guru Sai */}
           <div className="flex flex-col items-center justify-center gap-3 hover:scale-105 transition-transform cursor-pointer">
-            
-            {/* Bumped the size up drastically to h-16 on mobile, h-20 on desktop */}
             <img 
               src="/gurusai-logo.png" 
               alt="Guru Sai Logo" 
@@ -25,7 +38,7 @@ const Projects = () => {
             <h3 className="text-xl font-black text-gray-900 text-center">Guru Sai Constructions & Developers</h3>
           </div>
 
-          {/* Placeholder Clients: Muted them individually so Guru Sai stands out */}
+          {/* Placeholder Clients */}
           <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Two</h3>
           <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Three</h3>
           <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Four</h3>
@@ -42,19 +55,29 @@ const Projects = () => {
           </h2>
         </div>
 
-        {/* The Carousel Wrapper with Gradient Masks */}
-        <div className="relative max-w-7xl mx-auto">
+        {/* The Carousel Wrapper - Added 'group' here so arrows show on hover */}
+        <div className="relative max-w-7xl mx-auto group">
           
-          {/* THE MAGIC FADE ILLUSION (Stolen from your Testimonials!) */}
+          {/* LEFT ARROW BUTTON */}
+          <button 
+            onClick={() => scroll('left')} 
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 backdrop-blur-md border border-gray-200 text-gray-800 p-3 md:p-4 rounded-full shadow-xl hover:scale-110 hover:bg-white transition-all duration-300 opacity-100 md:opacity-0 group-hover:opacity-100 flex items-center justify-center"
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+
+          {/* THE MAGIC FADE ILLUSION */}
           <div className="absolute inset-y-0 left-0 w-8 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
           <div className="absolute inset-y-0 right-0 w-8 md:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-          {/* The Scrolling Container */}
-          {/* Increased md:px-24 so the first card starts slightly indented behind the fade */}
-          <div className="flex overflow-x-auto gap-6 px-6 md:px-24 pb-16 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          {/* THE SCROLLING TRACK (Notice the ref={scrollContainerRef} added here!) */}
+          <div 
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-6 px-6 md:px-24 pb-16 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
             
-            {/* BIG CARD: Guru Sai Constructions (Now in premium bg-gray-50) */}
-            <div className="bg-gray-50 rounded-[2rem] p-8 md:p-10 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group snap-center shrink-0 w-[85vw] md:w-[600px]">
+            {/* BIG CARD: Guru Sai Constructions */}
+            <div className="bg-gray-50 rounded-[2rem] p-8 md:p-10 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group/card snap-center shrink-0 w-[85vw] md:w-[600px]">
               <div>
                 <div className="bg-blue-100/60 text-blue-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
                   Completed
@@ -66,8 +89,8 @@ const Projects = () => {
               </div>
               
               {/* The Interactive Video Showcase */}
-              <div className="w-full mt-8 rounded-2xl border-4 border-white shadow-inner overflow-hidden relative group bg-gray-200">
-                <div className="absolute inset-0 bg-gray-900/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10 pointer-events-auto">
+              <div className="w-full mt-8 rounded-2xl border-4 border-white shadow-inner overflow-hidden relative group/video bg-gray-200">
+                <div className="absolute inset-0 bg-gray-900/10 backdrop-blur-sm opacity-100 md:opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10 pointer-events-auto">
                   <a 
                     href="https://www.gurusaiconstructions.com/" 
                     target="_blank" 
@@ -84,13 +107,13 @@ const Projects = () => {
                   loop 
                   muted 
                   playsInline
-                  className="w-full h-auto object-contain object-top transform group-hover:scale-[1.05] transition-transform duration-700 ease-out"
+                  className="w-full h-auto object-contain object-top transform group-hover/video:scale-[1.05] transition-transform duration-700 ease-out"
                 />
               </div>
             </div>
 
             {/* SMALL CARD 1: Upcoming Project 1 */}
-            <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group snap-center shrink-0 w-[85vw] md:w-[400px]">
+            <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group/card snap-center shrink-0 w-[85vw] md:w-[400px]">
               <div>
                 <div className="bg-orange-100/60 text-orange-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
                   Planning
@@ -102,7 +125,7 @@ const Projects = () => {
             </div>
 
             {/* SMALL CARD 2: Upcoming Project 2 */}
-            <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group snap-center shrink-0 w-[85vw] md:w-[400px]">
+            <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group/card snap-center shrink-0 w-[85vw] md:w-[400px]">
                <div>
                 <div className="bg-orange-100/60 text-orange-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
                   Planning
@@ -114,6 +137,15 @@ const Projects = () => {
             </div>
 
           </div>
+
+          {/* RIGHT ARROW BUTTON */}
+          <button 
+            onClick={() => scroll('right')} 
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 backdrop-blur-md border border-gray-200 text-gray-800 p-3 md:p-4 rounded-full shadow-xl hover:scale-110 hover:bg-white transition-all duration-300 opacity-100 md:opacity-0 group-hover:opacity-100 flex items-center justify-center"
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+
         </div>
       </div>
     </section>

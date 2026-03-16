@@ -24,7 +24,7 @@ const Pricing = ({ onOpenContact }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            className="bg-gray-100 rounded-[2rem] p-8 border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Launchpad</h3>
             <p className="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">Perfect for local businesses needing a professional digital footprint.</p>
@@ -86,7 +86,7 @@ const Pricing = ({ onOpenContact }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            className="bg-gray-100 rounded-[2rem] p-8 border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Empire</h3>
             <p className="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">Full-scale web applications and massive digital infrastructures.</p>
