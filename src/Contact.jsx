@@ -104,7 +104,7 @@ const Contact = ({ onClose }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div className="space-y-1 md:space-y-2">
                   <label htmlFor="phone" className="text-xs md:text-sm font-bold text-gray-900 ml-2">Phone <span className="text-gray-400 font-normal">(Optional)</span></label>
-                  <input type="tel" name="phone" id="phone" placeholder="+91 98765 43210" className="w-full bg-gray-50 border border-gray-100 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 text-sm md:text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder:text-gray-400" />
+                  <input type="tel" name="phone" id="phone" placeholder="+91 " className="w-full bg-gray-50 border border-gray-100 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 text-sm md:text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all placeholder:text-gray-400" />
                 </div>
 
                 <div className="space-y-1 md:space-y-2">
@@ -114,7 +114,7 @@ const Contact = ({ onClose }) => {
                       <option>Launchpad Package </option>
                       <option>Blueprint Package </option>
                       <option>Empire Package </option>
-                      <option>Other !</option>
+                      <option>Other!</option>
                     </select>
                     <div className="absolute inset-y-0 right-4 md:right-2 flex items-center pointer-events-none text-gray-400">▼</div>
                   </div>
