@@ -35,13 +35,20 @@ const Projects = () => {
               alt="Guru Sai Logo" 
               className="h-16 md:h-20 w-auto object-contain"
             />
-            <h3 className="text-xl font-black text-gray-900 text-center">Guru Sai Constructions & Developers</h3>
+            <h3 className="text-xl font-black text-gray-900 text-center">Guru Sai<br /> Constructions & Developers</h3>
+          </div>
+
+          {/* Abstract Art Gallery */}
+          <div className="flex flex-col items-center justify-center gap-3 hover:scale-105 transition-transform cursor-pointer">
+            <img 
+              src="/abstract-logo.jpeg" 
+              alt="Abstract Art Gallery Logo" 
+              className="h-16 md:h-20 w-auto object-contain"
+            />
+            <h3 className="text-xl font-black text-gray-900 text-center">Abstract Art Gallery</h3>
           </div>
 
           {/* Placeholder Clients */}
-          <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Two</h3>
-          <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Three</h3>
-          <h3 className="text-xl font-black text-gray-400 opacity-60 grayscale">Client Four</h3>
         </div>
       </div>
 
@@ -116,10 +123,10 @@ const Projects = () => {
             <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group/card snap-center shrink-0 w-[85vw] md:w-[400px]">
               <div>
                 <div className="bg-orange-100/60 text-orange-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
-                  Planning
+                  Development
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">E-Commerce Build</h3>
-                <p className="text-gray-600 mb-6">Modern storefront with optimized checkout flow.</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Abstract Art Gallery</h3>
+                <p className="text-gray-600 mb-6">Where exceptional art finds its digital home.</p>
               </div>
               <div className="w-full h-40 mt-auto bg-gray-200/50 rounded-xl border-4 border-white flex items-center justify-center text-gray-400 font-bold">Wireframing...</div>
             </div>
