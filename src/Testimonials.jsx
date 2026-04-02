@@ -14,42 +14,28 @@ const Testimonials = () => {
             Word on the <span className="text-blue-600">Street.</span>
           </h2>
           <p className="text-gray-500 mt-4 font-medium">What it's like to work with Richie.</p>
-          
         </div>    
 
-        {/* THE MINIMALIST CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* THE FIX: Swapped the grid layout for a centered flex container */}
+        <div className="flex justify-center items-center w-full px-4">
           <ScrollReveal>
-          {/* Card 1 */}
-          <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-            <p className="text-gray-600 font-medium leading-relaxed mb-8">
-              "Working with Richie was seamless. The site loads instantly and the entire process was handled with absolute professionalism."
-            </p>
-            <div className="font-bold text-gray-900 text-sm uppercase tracking-wider">Upcoming Client 1</div>
-          </div>
+            {/* Added max-w-2xl, w-full, and text-center to make it a featured quote */}
+            <div className="bg-white rounded-[2rem] p-8 md:p-12 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 w-full max-w-2xl mx-auto text-center">
+              
+              {/* Made the text slightly larger and italicized for that premium feel */}
+              <p className="text-gray-600 text-lg md:text-xl font-medium leading-relaxed mb-8 italic">
+                "We needed a digital storefront that matched the quality of our work. The final product exceeded our expectations entirely."
+              </p>
+              
+              {/* Client Name */}
+              <div className="font-bold text-gray-900 text-sm uppercase tracking-wider">
+                Guru - GSCD 
+              </div>
+              
+            </div>
           </ScrollReveal>
-
-          <ScrollReveal>
-          {/* Card 2 - Staggered layout */}
-          <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 md:mt-12">
-            <p className="text-gray-600 font-medium leading-relaxed mb-8">
-              "We needed a digital storefront that matched the quality of our work. The final product exceeded our expectations entirely."
-            </p>
-            <div className="font-bold text-gray-900 text-sm uppercase tracking-wider">Upcoming Client 2</div>
-          </div>
-          </ScrollReveal>
-
-          <ScrollReveal>
-          {/* Card 3 */}
-          <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-            <p className="text-gray-600 font-medium leading-relaxed mb-8">
-              "From wireframe to final launch, the communication was top-tier. Highly recommend if you want an agency-level website."
-            </p>
-            <div className="font-bold text-gray-900 text-sm uppercase tracking-wider">Upcoming Client 3</div>
-          </div>
-          </ScrollReveal>
-          
         </div>
+        
       </div>
     </section>
   );

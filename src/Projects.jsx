@@ -48,7 +48,15 @@ const Projects = () => {
             <h3 className="text-xl font-black text-gray-900 text-center">Abstract Art Gallery</h3>
           </div>
 
-          {/* Placeholder Clients */}
+          {/* Harmony */}
+          <div className="flex flex-col items-center justify-center gap-3 hover:scale-105 transition-transform cursor-pointer">
+            <img 
+              src="/harmony(transparent).png" 
+              alt="Harmony Logo" 
+              className="h-16 md:h-20 w-auto object-contain"
+            />
+            <h3 className="text-xl font-black text-gray-900 text-center">Harmony</h3>
+          </div>
         </div>
       </div>
 
@@ -137,8 +145,8 @@ const Projects = () => {
                 <div className="bg-orange-100/60 text-orange-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
                   Planning
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Service Landing Page</h3>
-                <p className="text-gray-600 mb-6">High-conversion layout for local business.</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Harmony</h3>
+                <p className="text-gray-600 mb-6">Build. Buy. Rent. Live.</p>
               </div>
               <div className="w-full h-40 mt-auto bg-gray-200/50 rounded-xl border-4 border-white flex items-center justify-center text-gray-400 font-bold">Designing...</div>
             </div>
