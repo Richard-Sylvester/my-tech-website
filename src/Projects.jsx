@@ -131,7 +131,7 @@ const Projects = () => {
             <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group/card snap-center shrink-0 w-[85vw] md:w-[400px]">
               <div>
                 <div className="bg-orange-100/60 text-orange-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
-                  Development
+                  Developing
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Abstract Art Gallery</h3>
                 <p className="text-gray-600 mb-6">Where exceptional art finds its digital home.</p>
@@ -143,12 +143,24 @@ const Projects = () => {
             <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group/card snap-center shrink-0 w-[85vw] md:w-[400px]">
                <div>
                 <div className="bg-orange-100/60 text-orange-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
-                  Planning
+                  Developing
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Harmony</h3>
                 <p className="text-gray-600 mb-6">Build. Buy. Rent. Live.</p>
               </div>
-              <div className="w-full h-40 mt-auto bg-gray-200/50 rounded-xl border-4 border-white flex items-center justify-center text-gray-400 font-bold">Designing...</div>
+              <div className="w-full h-40 mt-auto bg-gray-200/50 rounded-xl border-4 border-white flex items-center justify-center text-gray-400 font-bold">Building...</div>
+            </div>
+
+            {/* SMALL CARD 3: Upcoming Project 3 */}
+            <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group/card snap-center shrink-0 w-[85vw] md:w-[400px]">
+               <div>
+                <div className="bg-orange-100/60 text-orange-800 text-xs font-bold px-3 py-1 rounded-full w-max mb-4 uppercase tracking-wide">
+                  Planning
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">TravelExp</h3>
+                <p className="text-gray-600 mb-6">Where Backpacking Meets Experiences</p>
+              </div>
+              <div className="w-full h-40 mt-auto bg-gray-200/50 rounded-xl border-4 border-white flex items-center justify-center text-gray-400 font-bold">Coming Soon...</div>
             </div>
 
           </div>

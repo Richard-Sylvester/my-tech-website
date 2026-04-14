@@ -65,8 +65,8 @@ const Footer = ({ onOpenContact }) => {
               </li>
               {/* Instagram - Updated with real URL */}
               <li>
-                <a href="https://instagram.com/richiee.films" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
-                  <span>📸</span> <span>@richiee.films</span>
+                <a href="https://instagram.com/richiee.sly" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
+                  <span>📸</span> <span>@richiee.sly</span>
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs ml-1">↗</span>
                 </a>
               </li>

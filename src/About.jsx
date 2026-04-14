@@ -22,7 +22,7 @@ const About = () => {
                 With a formal background in Artificial Intelligence and Data Science, I approach web development differently. I don't just build websites that look good, I build intelligent, high-performance systems designed to help your business thrive.
               </p>
               <p>
-                Beyond the editor, I have a deep passion for videography and content creation. This perspective allows me to bridge the gap between heavy technical architecture and highly engaging, cinematic user experiences.
+                Beyond the editor, I have a deep passion for videography and content creation. This perspective allows me to bridge the gap between heavy technical architecture and highly engaging user experiences.
               </p>
             </div>
 
